@@ -3,11 +3,12 @@ class GeoVictoria():
     import datetime as dt
 
     yesterday = dt.datetime.now().date() + dt.timedelta(days=-1)
+    today = dt.datetime.now().date()
 
     def GetAttendance(
         person:str = None,
-        i_date:str = '20221121000000',
-        f_date:str = yesterday.strftime('%Y%m%d235959'),
+        i_date:str = '20221120000000',
+        f_date:str = today.strftime('%Y%m%d235959'),
         includeAll:int = 1
     ):
 
@@ -68,8 +69,8 @@ class GeoVictoria():
 
     def GetPermissions(
         person:str = None,
-        i_date:str = '20221121000000',
-        f_date:str = yesterday.strftime('%Y%m%d235959'),
+        i_date:str = '20221020000000',
+        f_date:str = today.strftime('%Y%m%d235959'),
         includeAll:int = 1
     ):
 
